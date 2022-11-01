@@ -1,0 +1,31 @@
+
+.kasa-containerHome{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pictureHome-img{
+    filter: brightness(75%);
+    border-radius: 25px;
+    width: 100%;
+}
+
+.pictureHome-img img{
+    filter: brightness(75%);
+    border-radius: 25px;
+}
+
+
+.kasa-containerHome h1{
+    position: absolute;
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 142.6%;
+}
+

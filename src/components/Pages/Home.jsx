@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../Banner";
-import Card from "../Card";
+import Gallery from "../Gallery";
 import Footer from "../Footer";
 import pictureHome from "../../assets/home/pictureHome.png";
 import "../../styles/Home.css";
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
       </header>
 
-      <Card />
+      <Gallery />
 
       <Footer />
 

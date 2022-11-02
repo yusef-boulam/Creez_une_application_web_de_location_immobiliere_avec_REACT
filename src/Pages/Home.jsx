@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "../Banner";
-import Gallery from "../Gallery";
-import Footer from "../Footer";
-import pictureHome from "../../assets/home/pictureHome.png";
-import "../../styles/Home.css";
+import Banner from "../components/Banner";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
+import pictureHome from "../assets/home/pictureHome.png";
+import "../styles/Home.css";
 
 
 export default function Home() {

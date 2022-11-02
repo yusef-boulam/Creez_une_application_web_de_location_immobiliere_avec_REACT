@@ -1,7 +1,7 @@
 import React from 'react'
-import Banner from '../Banner'
-import Footer from "../Footer";
-import "../../styles/FicheLogement.css";
+import Banner from '../components/Banner'
+import Footer from "../components/Footer";
+import "../styles/FicheLogement.css";
 
 export default function FicheLogement() {
     

@@ -1,0 +1,29 @@
+.container-Dropdown{
+    background-color: #FF6060;
+    width: 1023px;
+    height : 47px ;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-Dropdown h2{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    color: white;
+    margin-left: 15px;
+}
+
+
+.container-Dropdown img{
+    width: 25px;
+    height: 15px;
+    color: white;
+    margin-right: 15px;
+
+}

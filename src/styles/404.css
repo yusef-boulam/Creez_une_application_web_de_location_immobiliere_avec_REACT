@@ -1,0 +1,23 @@
+.container-404{  
+    color: #FF6060;
+    font-family: 'Montserrat';
+    font-style: normal;
+    text-align: center;
+}
+
+.container-404 h1{
+    font-size: 288px;
+    line-height: 142.6%;
+    margin: 50px 0 50px 0;
+}
+
+.container-404 p{
+font-size: 45px;
+
+}
+
+.link404{
+    font-size: 30px;
+    color: #FF6060;
+    text-decoration-line: underline;
+}

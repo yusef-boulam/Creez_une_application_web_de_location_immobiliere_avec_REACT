@@ -8,7 +8,6 @@ import { useParams } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
 import Tag from "../components/Tag";
 
-
 export default function FicheLogement() {
   // on recupere l'id du logement
   const Id = () => {
@@ -43,24 +42,36 @@ export default function FicheLogement() {
     </ul>,
   ];
 
-  console.log(data.tags)
+  console.log(data.tags);
   //AFFICHAGE
   return (
     <div className="page-fiche">
       <header>
         <Banner />
+
         <div className="containerFicheLogement">
-          <img src={data.cover} alt="interieure du logement" />
-          <h1>{data.title}</h1>
-          <p>{data.location}</p>
+          <img
+            className="imgLogement"
+            src={data.cover}
+            alt="interieure du logement"
+          />
+          <div className="containerTitrePhotoUser">
+            <div>
+              <h1>{data.title}</h1>
+              <p>{data.location}</p>
+            </div>
+            <div className="containerNamePhotoUser">
+              <p>{data.host.name}</p>
+              <img className="imgUser" src={data.host.picture} alt="user" />
+            </div>
+          </div>
         </div>
       </header>
 
-
       <div className="container-tag">
-      {data.tags.map((tag) => (
-      <Tag tag = {tag} />
-      ))}
+        {data.tags.map((tag) => (
+          <Tag tag={tag} />
+        ))}
       </div>
 
       <div className="container-dropdown">

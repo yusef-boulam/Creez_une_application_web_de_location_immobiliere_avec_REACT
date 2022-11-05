@@ -9,9 +9,15 @@
     font-style: normal;
     font-weight: 500;
     line-height: 142.6%;
+
 }
 
-.containerFicheLogement img{
+.containerTitrePhotoUser{
+    display:flex;
+    justify-content: space-between;
+}
+
+.imgLogement{
 width: 100%;
 height: 55vh;
 border-radius: 25px;
@@ -30,6 +36,29 @@ margin-top: 30px;
     font-size: 18px;
     text-align: left;
 }
+
+.containerNamePhotoUser{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.containerNamePhotoUser p{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    width: 64px;
+    height: 64px;
+
+}
+
+.imgUser{
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    
+    }
+    
 
 .container-dropdown{
     display: flex;

@@ -7,6 +7,7 @@ import Data from "../datas/datas";
 import { useParams } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
 
+
 export default function FicheLogement() {
   // on recupere l'id du logement
   const Id = () => {
@@ -30,17 +31,23 @@ export default function FicheLogement() {
   //copie du state
   const arrayDropdownModify = [...arrayDropdown];
 
-  //on modofie la copie
+  //on modofie la copie en ajoutant les data du logement en question
 
   arrayDropdownModify[0].description = data.description;
-  arrayDropdownModify[1].description = data.equipments;
+  arrayDropdownModify[1].description = [
+    <ul>
+      {data.equipments.map((equipement) => {
+        return <li>{equipement}</li>;
+      })}
+    </ul>,
+  ];
+
 
   //AFFICHAGE
   return (
     <div>
       <header>
         <Banner />
-
         <div className="containerFicheLogement">
           <img src={data.cover} alt="interieure du logement" />
           <h1>{data.title}</h1>
@@ -49,17 +56,16 @@ export default function FicheLogement() {
       </header>
       <div className="container-dropdown">
         {arrayDropdown.map((dropdown) => (
-            <div className="dropdown" key={dropdown.id}>
-          <Dropdown
-            texte={dropdown.title}
-            arrayDropdown={arrayDropdown}
-            setArrayDropdown={setArrayDropdown}
-            id={dropdown.id}
-          />
-               </div>
-        ))}
+          <div className="dropdown" key={dropdown.id}>
+            <Dropdown
+              texte={dropdown.title}
+              arrayDropdown={arrayDropdown}
+              setArrayDropdown={setArrayDropdown}
+              id={dropdown.id}
+            />
           </div>
- 
+        ))}
+      </div>
 
       <Footer />
     </div>

@@ -1,3 +1,7 @@
+.page-ficheLogement{
+    max-width: 1500px;
+    text-align: center;
+}
 
 .containerFicheLogement {
     color: #FF6060;
@@ -9,6 +13,7 @@
 
 .containerFicheLogement img{
 width: 100%;
+height: 55vh;
 border-radius: 25px;
 object-fit: cover;
 margin-top: 30px;
@@ -17,12 +22,13 @@ margin-top: 30px;
 .containerFicheLogement h1{
     font-size: 36px;
     margin-bottom: 12px;
-    
+   text-align: left;
 }
 
 .containerFicheLogement p{
     margin-top: 5px;
     font-size: 18px;
+    text-align: left;
 }
 
 .container-dropdown{

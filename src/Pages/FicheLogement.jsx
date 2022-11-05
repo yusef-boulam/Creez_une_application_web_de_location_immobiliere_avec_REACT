@@ -23,8 +23,8 @@ export default function FicheLogement() {
   const data = datas.find((data) => id === data.id);
 
   const [arrayDropdown, setArrayDropdown] = useState([
-    { id: 1, title: "Description", Open: false, description: "" },
-    { id: 2, title: "Equipement", Open: false, description: "" },
+    { id: 3, title: "Description", Open: false, description: "" },
+    { id: 4, title: "Equipement", Open: false, description: "" },
   ]);
 
   // COMPORTEMENT
@@ -45,7 +45,7 @@ export default function FicheLogement() {
 
   //AFFICHAGE
   return (
-    <div>
+    <div className="page-fiche">
       <header>
         <Banner />
         <div className="containerFicheLogement">
@@ -56,8 +56,9 @@ export default function FicheLogement() {
       </header>
       <div className="container-dropdown">
         {arrayDropdown.map((dropdown) => (
-          <div className="dropdown" key={dropdown.id}>
+          <div className="dropdown">
             <Dropdown
+              key={dropdown.id}
               texte={dropdown.title}
               arrayDropdown={arrayDropdown}
               setArrayDropdown={setArrayDropdown}

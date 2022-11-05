@@ -1,4 +1,8 @@
 
+.pageHome{
+    max-width: 1500px;
+}
+
 .kasa-containerHome{
     margin-top: 50px;
     display: flex;

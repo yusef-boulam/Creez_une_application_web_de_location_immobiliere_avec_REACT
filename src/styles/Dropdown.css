@@ -1,11 +1,8 @@
-.gloabal-container {
-    width: 1023px;
-}
+
 
 .container-Dropdown{
+    width: 100%;
     background-color: #FF6060;
-    width: 1023px;
-    height : 47px ;
     margin-top: 30px;
     border-radius: 5px;
     display: flex;

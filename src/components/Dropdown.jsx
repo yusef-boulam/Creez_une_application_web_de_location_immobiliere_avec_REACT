@@ -43,7 +43,7 @@ if (dropdownClic.Open === true){
 else {
   // si descrpitif ferme
   return (
-    <div className="gloabal-container">
+    <div>
     <div className="container-Dropdown">
         <h2>{`${texte}`}</h2>
       <img className="img-close"

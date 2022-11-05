@@ -1,0 +1,36 @@
+
+.containerFicheLogement {
+    color: #FF6060;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 142.6%;
+}
+
+.containerFicheLogement img{
+width: 100%;
+border-radius: 25px;
+object-fit: cover;
+margin-top: 30px;
+}
+
+.containerFicheLogement h1{
+    font-size: 36px;
+    margin-bottom: 12px;
+    
+}
+
+.containerFicheLogement p{
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.container-dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.dropdown{
+    width: 49%;
+}

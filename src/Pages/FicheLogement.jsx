@@ -6,6 +6,7 @@ import "../styles/FicheLogement.css";
 import Data from "../datas/datas";
 import { useParams } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
+import Tag from "../components/Tag";
 
 
 export default function FicheLogement() {
@@ -42,7 +43,7 @@ export default function FicheLogement() {
     </ul>,
   ];
 
-
+  console.log(data.tags)
   //AFFICHAGE
   return (
     <div className="page-fiche">
@@ -54,6 +55,14 @@ export default function FicheLogement() {
           <p>{data.location}</p>
         </div>
       </header>
+
+
+      <div className="container-tag">
+      {data.tags.map((tag) => (
+      <Tag tag = {tag} />
+      ))}
+      </div>
+
       <div className="container-dropdown">
         {arrayDropdown.map((dropdown) => (
           <div className="dropdown">

@@ -40,3 +40,7 @@ margin-top: 30px;
 .dropdown{
     width: 49%;
 }
+
+.container-tag{
+    display: flex;
+}

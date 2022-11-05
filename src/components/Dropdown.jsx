@@ -34,7 +34,7 @@ if (dropdownClic.Open === true){
       <img
         onClick={()=> openClose(id)}
         src={Vector}
-        alt="fleche ouverture descriptifs"
+        alt="fleche fermeture descriptifs"
       />
     </div>
   );

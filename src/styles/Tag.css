@@ -1,0 +1,16 @@
+
+.tag{
+    background: #FF6060;
+    border-radius: 10px;
+    height: 25px;
+width: 115px;
+color: white;
+font-family: Montserrat;
+font-size: 14px;
+font-weight: 500;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-right: 10px;
+
+}

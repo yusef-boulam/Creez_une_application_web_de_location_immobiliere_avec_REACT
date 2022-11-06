@@ -1,0 +1,14 @@
+.container-tag-stars{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container.stars{
+    height: 36px;
+width: 196px;
+}
+
+.stars{
+    margin-left: 7px;
+}

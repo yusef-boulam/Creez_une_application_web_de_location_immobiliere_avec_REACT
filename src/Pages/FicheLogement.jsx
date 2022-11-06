@@ -7,6 +7,7 @@ import Data from "../datas/datas";
 import { useParams } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
 import Tag from "../components/Tag";
+import Stars from "../components/Stars";
 
 export default function FicheLogement() {
   // on recupere l'id du logement
@@ -68,10 +69,16 @@ export default function FicheLogement() {
         </div>
       </header>
 
-      <div className="container-tag">
-        {data.tags.map((tag) => (
-          <Tag tag={tag} />
-        ))}
+      <div className="container-tag-stars">
+        <div className="container-tag">
+          {data.tags.map((tag) => (
+            <Tag tag={tag} />
+          ))}
+        </div>
+
+        <div className="container-stars">
+          <Stars rating = {data.rating} />
+        </div>
       </div>
 
       <div className="container-dropdown">

@@ -36,7 +36,7 @@ export default function FicheLogement() {
 
   arrayDropdownModify[0].description = data.description;
   arrayDropdownModify[1].description = [
-    <ul>
+    <ul className="container-equipement">
       {data.equipments.map((equipement) => {
         return <li>{equipement}</li>;
       })}
@@ -46,7 +46,7 @@ export default function FicheLogement() {
   console.log(data.tags);
   //AFFICHAGE
   return (
-    <div className="page-fiche">
+    <div className="page-ficheLogement">
       <header>
         <Banner />
 

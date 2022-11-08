@@ -27,7 +27,7 @@ function Dropdown({texte, arrayDropdown, setArrayDropdown, id}) {
   const dropdownClic = arrayDropdown.find(dropdown => id === dropdown.id)
 
 if (dropdownClic.Open === true){
-// si descrpitif ouvert
+// si descrpitif ferme
   return (
     <div className="container-Dropdown">
         <h2>{`${texte}`}</h2>
@@ -41,7 +41,7 @@ if (dropdownClic.Open === true){
 }
 
 else {
-  // si descrpitif ferme
+  // si descrpitif ouvert
   return (
     <div>
     <div className="container-Dropdown">

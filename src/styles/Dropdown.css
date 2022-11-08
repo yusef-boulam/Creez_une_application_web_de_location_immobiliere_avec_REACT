@@ -33,7 +33,7 @@
 }
 
 .descriptif{
-    font-family: Montserrat;
+    font-family: 'Montserrat';
 font-size: 24px;
 font-weight: 400;
 line-height: 34px;
@@ -44,4 +44,5 @@ padding: 25px;
     margin-top:0;
     background: #F7F7F7;
 border-radius: 5px;
+
 }

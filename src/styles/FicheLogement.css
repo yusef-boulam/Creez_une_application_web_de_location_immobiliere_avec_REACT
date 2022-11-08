@@ -1,3 +1,7 @@
+header{
+    width: 100%;
+}
+
 .page-ficheLogement{
     max-width: 1500px;
     text-align: center;
@@ -8,7 +12,6 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 500;
-    line-height: 142.6%;
 
 }
 
@@ -19,7 +22,7 @@
 
 .imgLogement{
 width: 100%;
-height: 55vh;
+height: 48vh;
 border-radius: 25px;
 object-fit: cover;
 margin-top: 30px;
@@ -72,4 +75,10 @@ margin-top: 30px;
 
 .container-tag{
     display: flex;
+}
+
+.container-equipement{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0;
 }

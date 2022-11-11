@@ -8,8 +8,12 @@ import { useParams } from "react-router-dom";
 import Dropdown from "../components/Dropdown";
 import Tag from "../components/Tag";
 import Stars from "../components/Stars";
+import arrowBack from "../assets/ficheLogement/arrowBack.png";
+import arrowForward from "../assets/ficheLogement/arrowForward.png";
+// import { Link } from 'react-router-dom'
 
 export default function FicheLogement() {
+
   // on recupere l'id du logement
   const Id = () => {
     const { id } = useParams();
@@ -22,6 +26,12 @@ export default function FicheLogement() {
   const [datas] = useState(Data);
   // on recupere l'objet correspondant à notre logement dans data
   const data = datas.find((data) => id === data.id);
+
+  console.log(data)
+
+  // if(data===undefined){
+  //   <Link to="/*" className=''></Link>
+  // }
 
   const [arrayDropdown, setArrayDropdown] = useState([
     { id: 3, title: "Description", Open: false, description: "" },
@@ -43,7 +53,6 @@ export default function FicheLogement() {
     </ul>,
   ];
 
-  console.log(data.tags);
   //AFFICHAGE
   return (
     <div className="page-ficheLogement">
@@ -51,11 +60,21 @@ export default function FicheLogement() {
         <Banner />
 
         <div className="containerFicheLogement">
-          <img
-            className="imgLogement"
-            src={data.cover}
-            alt="interieure du logement"
-          />
+          <div className="carrousel">
+            <img
+              className="imgLogement"
+              src={data.cover}
+              alt="interieure du logement"
+            />
+
+            <img className="arrow_back" src={arrowBack} alt="arrow back" />
+
+            <img
+              className="arrow_forward"
+              src={arrowForward}
+              alt="arrow forward"
+            />
+          </div>
           <div className="containerTitrePhotoUser">
             <div>
               <h1>{data.title}</h1>
@@ -77,7 +96,7 @@ export default function FicheLogement() {
         </div>
 
         <div className="container-stars">
-          <Stars rating = {data.rating} />
+          <Stars rating={data.rating} />
         </div>
       </div>
 

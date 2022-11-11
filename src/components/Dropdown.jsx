@@ -1,61 +1,35 @@
 import "../styles/Dropdown.css";
-import React from "react";
-import Vector from "../assets/Apropos/Vector.png";
+import React, { useState } from "react";
 
-function Dropdown({texte, arrayDropdown, setArrayDropdown, id}) {
- 
-  const openClose = (id) => {
 
- // copie du state 
- const arrayDropdownModify = [...arrayDropdown]
+function Dropdown({title, description}) {
 
- // manipule la copie du state
-   const dropdownClic = arrayDropdownModify.find(dropdown => id === dropdown.id)
-     if(dropdownClic.Open === true) {
-      arrayDropdownModify.find(dropdown => id === dropdown.id).Open = false
+    //CREATION DU STATE
+    const [isOpen, setIsOpen] = useState(true)
 
-  } else if (dropdownClic.Open === false){
-    arrayDropdownModify.find(dropdown => id === dropdown.id).Open = true
-   }
+    function handleClick(event){
+        event.preventDefault()
+              //CODE a ecrire pour changer l'etat de isOpen
+              let CopyisOpen = true
+             isOpen ? CopyisOpen = false : CopyisOpen = true
+             setIsOpen(CopyisOpen)
+        
+             console.log(CopyisOpen)
    
-     // modifie le state
-   setArrayDropdown(arrayDropdownModify)
 
-  }
 
-  // AFFICHAGE
-  const dropdownClic = arrayDropdown.find(dropdown => id === dropdown.id)
+  
+    }
 
-if (dropdownClic.Open === true){
-// si descrpitif ferme
-  return (
-    <div className="container-Dropdown">
-        <h2>{`${texte}`}</h2>
-      <img
-        onClick={()=> openClose(id)}
-        src={Vector}
-        alt="fleche fermeture descriptifs"
-      />
-    </div>
-  );
-}
-
-else {
-  // si descrpitif ouvert
-  return (
+    //AFFICHAGE
+return (
     <div>
-    <div className="container-Dropdown">
-        <h2>{`${texte}`}</h2>
-      <img className="img-close"
-        onClick={()=> openClose(id)}
-        src={Vector}
-        alt="fleche ouverture descriptifs"
-      />
+        <button onClick={handleClick}>{title}</button>
+        {isOpen && (<p>{description}</p>)}
     </div>
-    <div className="descriptif"> {dropdownClic.description}</div>
-    </div>
-  );
+)
+
 
 }
-}
+
 export default Dropdown;

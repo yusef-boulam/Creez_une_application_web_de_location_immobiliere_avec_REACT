@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import "../styles/APropos.css";
@@ -27,9 +27,11 @@ export default function APropos() {
           className="picture-APropos-img"
         />
       </header>
+      <section>
       {arrayDropdown.map((dropdown) => (
         <Dropdown key={dropdown.id} title ={dropdown.title} description={dropdown.description}/>
       ))}
+      </section>
       <Footer />
     </div>
   );

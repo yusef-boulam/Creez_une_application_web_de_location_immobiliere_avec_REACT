@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import "../styles/FicheLogement.css";

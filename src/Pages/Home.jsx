@@ -9,16 +9,15 @@ import "../styles/Home.css";
 export default function Home() {
  
   return (
-    <div className="pageHome">
+    <div className="homePage">
       <header>
 
         <Banner />
 
-        <div className="kasa-containerHome">
+        <div className="container-img-h1">
           <img
             src={pictureHome}
             alt="falaises donnant sur la mer"
-            className="pictureHome-img"
           />
           <h1>Chez vous, partout et ailleurs</h1>
         </div>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import "../styles/Card.css";
 
 
 function Card({id, cover, title}) {
@@ -8,9 +9,9 @@ function Card({id, cover, title}) {
  
         <Link
           to={`/ficheLogement/${id}`}
-          className="link-image-appartement photo-background"
+          className="card"
         >
-          <img src={cover} alt="logo kasa" className="photo-appartement" />
+          <img src={cover} alt="appartement" />
           <h2>{title}</h2>
         </Link>
 )}

@@ -1,9 +1,10 @@
 
-.pageHome{
+.homePage{
     max-width: 1500px;
+    padding: 20px;
 }
 
-.kasa-containerHome{
+.container-img-h1{
     margin-top: 50px;
     display: flex;
     justify-content: center;
@@ -11,20 +12,15 @@
     position: relative;
 }
 
-.pictureHome-img{
+.container-img-h1 img{
+    object-fit: cover;
+    height: 30vh;
     filter: brightness(75%);
     border-radius: 25px;
     width: 100%;
 }
 
-.pictureHome-img img{
-    filter: brightness(75%);
-    border-radius: 25px;
-
-}
-
-
-.kasa-containerHome h1{
+.container-img-h1 h1{
     position: absolute;
     color: white;
     font-family: 'Montserrat';
@@ -32,5 +28,20 @@
     font-weight: 500;
     font-size: 44px;
     line-height: 142.6%;
+}
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+
+    .container-img-h1 h1{
+        font-size: 24px;
+    }
+    
+
+    
+
 }
 

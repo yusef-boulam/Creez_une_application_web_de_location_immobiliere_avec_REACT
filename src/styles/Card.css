@@ -1,16 +1,5 @@
 
-.home-section{
-    background: #e9e6e6;
-border-radius: 25px;
-margin-top: 30px;
-padding: 20px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-}
-
-
-.link-image-appartement{
+.card{
     z-index: 0;
     width: 30%;
     border-radius: 10px;
@@ -18,23 +7,21 @@ justify-content: space-between;
     max-width: 400px;
     object-fit: cover;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
-    margin: 0 0 4% 0;
+    margin: 3% 0% 0 0;
     text-align: left;
-    padding-top: 0;
     box-shadow: 2px 2px 30px rgb(209, 208, 208);
     position:relative;
-
 }
 
-.photo-appartement{
+.card img{
     z-index: 1;
-    height: 252px;
+    height: 25vh;
     width: 100%;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.link-image-appartement h2{
+.card h2{
     position: absolute;
     margin: 0;
     bottom: 0;
@@ -43,3 +30,21 @@ justify-content: space-between;
     color: white;
     font-size: 15px;
 }
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+    .card{
+        width: 95%;
+        margin-top: 10%;
+
+    }
+
+    .card img{
+        height: 200px;
+    }
+
+    }

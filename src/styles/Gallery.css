@@ -1,0 +1,12 @@
+
+.section-gallery {
+background: #e9e6e6;
+border-radius: 25px;
+margin-top: 30px;
+padding-bottom: 50px;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+

@@ -5,12 +5,12 @@
   margin-top: 20px;
 }
 
-
 .container-nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
 width: 220px;
+margin-right: 20px;
 
 }
 

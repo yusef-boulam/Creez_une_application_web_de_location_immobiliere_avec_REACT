@@ -4,11 +4,11 @@ import '../styles/Banner.css'
 
 function Banner() {
     return (
-        <header className='kasa-banner-header'>
+        <header className='container-header'>
             <img src={logo} alt='logo kasa' className='kasa-logo' />
-            <ul className='kasa-nav'>
-                <Link to="/" className='kasa-nav-Accueil'>Accueil</Link>
-                <Link to="/APropos" className='kasa-nav-A-Propos'>A Propos</Link>
+            <ul className='container-nav'>
+                <Link to="/" className='nav-accueil'>Accueil</Link>
+                <Link to="/APropos" className='nav-APropos'>A Propos</Link>
             </ul>
         </header >
     )

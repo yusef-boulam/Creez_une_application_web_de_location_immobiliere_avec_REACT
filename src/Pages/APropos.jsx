@@ -24,7 +24,7 @@ export default function APropos() {
         <img
           src={pictureApropos}
           alt="montagnes"
-          className="picture-APropos-img"
+          className="img-Principale"
         />
       </header>
       <section>

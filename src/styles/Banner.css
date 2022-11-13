@@ -1,6 +1,4 @@
-
-
-.kasa-banner-header {
+.container-header {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -8,9 +6,7 @@
 }
 
 
-.kasa-nav {
-/* _Nav */
-
+.container-nav {
 display: flex;
 justify-content: space-between;
 align-items: center;
@@ -18,42 +14,31 @@ width: 220px;
 
 }
 
-.kasa-nav-Accueil {
-/* Accueil */
-
+.nav-accueil{
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 142.6%;
-/* or 34px */
-
 display: flex;
 align-items: flex-end;
 text-align: right;
-
-
 color: #FF6060;
 text-decoration: none;
 
 }
 
-.kasa-nav-Accueil:hover{
+.nav-accueil:hover{
     text-decoration: underline;
 }
 
 
-.kasa-nav-A-Propos {
- /* A Propos */
-
-
+.nav-APropos {
 font-family: 'Montserrat';
 font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 142.6%;
-/* or 34px */
-
 display: flex;
 align-items: flex-end;
 text-align: right;
@@ -62,7 +47,26 @@ color: #FF6060;
 text-decoration: none;
 }
 
-
-.kasa-nav-A-Propos:hover{
+.nav-APropos:hover{
     text-decoration: underline;
+}
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+.container-header{
+  flex-direction: column;
+
+}
+
+.container-nav {
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+  padding: 0; 
+  }
+
 }

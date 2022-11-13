@@ -1,31 +1,28 @@
 
+body{
+    width: 100%;
+    max-width: 1500px;
+}
+
+
 section{
     width: 100%;
 }
 
+.APropos{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+   }
 
-.picture-APropos-img{
+.img-Principale{
+    object-fit: cover;
+    height: 30vh;
     margin-top: 50px;
     margin-bottom: 50px;
     filter: brightness(75%);
     border-radius: 25px;
     width: 100%;
-}
-
-.picture-APropos-img img{
     filter: brightness(75%);
     border-radius: 25px;
-}
-
-.APropos{
- display: flex;
- flex-direction: column;
- padding: 10px;
-
-}
-
-
-body{
-    width: 100%;
-    max-width: 1500px;
 }

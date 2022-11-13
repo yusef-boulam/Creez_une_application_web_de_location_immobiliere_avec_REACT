@@ -20,7 +20,7 @@ export default function APropos() {
   return (
     <div className="APropos">
       <header>
-        <Banner />
+        <Banner/>
         <img
           src={pictureApropos}
           alt="montagnes"

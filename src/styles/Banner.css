@@ -11,15 +11,15 @@ justify-content: space-between;
 align-items: center;
 width: 220px;
 margin-right: 20px;
+font-weight: 500;
+font-size: 24px;
+line-height: 142.6%;
 
 }
 
 .nav-accueil{
 font-family: 'Montserrat';
 font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 142.6%;
 display: flex;
 align-items: flex-end;
 text-align: right;
@@ -36,9 +36,6 @@ text-decoration: none;
 .nav-APropos {
 font-family: 'Montserrat';
 font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 142.6%;
 display: flex;
 align-items: flex-end;
 text-align: right;
@@ -57,16 +54,21 @@ text-decoration: none;
 
 @media screen and (max-width: 767px) {
 
-.container-header{
-  flex-direction: column;
+  .container-header {
+    align-items: center;
+  }
 
+.container-header img{
+width: 40%;
 }
 
 .container-nav {
   justify-content: space-around;
-  width: 100%;
-  margin-top: 50px;
+  width: 45%;
+  margin-top: 20px;
   padding: 0; 
+  font-size: 15px;
+  margin-right: 0;
   }
 
 }

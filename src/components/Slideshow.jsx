@@ -1,5 +1,4 @@
 import "../styles/Slideshow.css";
-import "../styles/FicheLogement.css";
 import React, { useState } from "react";
 import arrowBack from "../assets/ficheLogement/arrowBack.png";
 import arrowForward from "../assets/ficheLogement/arrowForward.png";

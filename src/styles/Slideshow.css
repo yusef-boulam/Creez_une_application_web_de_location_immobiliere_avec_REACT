@@ -1,0 +1,38 @@
+/* CARROUSEL */
+
+.carrousel {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.imgLogement {
+    width: 100%;
+    height: 48vh;
+    border-radius: 25px;
+    object-fit: cover;
+}
+
+
+.arrow_forward {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    height: 60px;
+}
+
+.arrow_forward:hover{
+    filter: brightness(25%);
+}
+
+.arrow_back {
+    position: absolute;
+    left: 0;
+    height: 60px;
+    margin-left: 20px;
+}
+
+.arrow_back:hover{
+    filter: brightness(25%);
+}

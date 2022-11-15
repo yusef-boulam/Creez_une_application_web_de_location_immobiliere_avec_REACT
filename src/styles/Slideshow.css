@@ -14,6 +14,9 @@
     object-fit: cover;
 }
 
+.arrow{
+margin-top:-60px
+}
 
 .arrow_forward {
     position: absolute;
@@ -34,5 +37,32 @@
 }
 
 .arrow_back:hover{
+    filter: brightness(25%);
+}
+
+
+/* ball */
+
+.container-ball{
+    position: absolute;
+    width: 200px;
+    height: 15px;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.ball{
+   margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.ball:hover{
     filter: brightness(25%);
 }

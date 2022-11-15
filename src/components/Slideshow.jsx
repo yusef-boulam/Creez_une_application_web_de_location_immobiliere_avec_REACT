@@ -2,6 +2,7 @@ import "../styles/Slideshow.css";
 import React, { useState } from "react";
 import arrowBack from "../assets/ficheLogement/arrowBack.png";
 import arrowForward from "../assets/ficheLogement/arrowForward.png";
+import Ball from "./Ball";
 
 function Slideshow(data) {
   //CREATION DU STATE
@@ -38,9 +39,12 @@ function Slideshow(data) {
     <div className="carrousel">
       <img className="imgLogement" src={picture} alt="interieure du logement" />
 
-    {/* affichage des fleches uniquement si plusieurs photos */}
+      {/* affichage des fleches uniquement si plusieurs photos */}
       {data.data.pictures.length > 1 && (
-        <div>
+        <div className="arrow">
+
+          
+          {/* arrow back */}
           <img
             className="arrow_back"
             onClick={handleClickBack}
@@ -48,6 +52,11 @@ function Slideshow(data) {
             alt="arrow back"
           />
 
+          {/* BALL */}
+      
+          <Ball data={data}/>
+
+          {/* arrow forward */}
           <img
             className="arrow_forward"
             onClick={handleClickForward}

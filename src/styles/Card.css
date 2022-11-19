@@ -1,27 +1,40 @@
-
-.card{
-    z-index: 0;
+.card {
     width: 30%;
     border-radius: 10px;
     min-width: 235px;
     max-width: 400px;
     object-fit: cover;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     margin: 3% 0% 0 0;
     text-align: left;
     box-shadow: 2px 2px 30px rgb(209, 208, 208);
-    position:relative;
-}
-
-.card img{
-    z-index: 1;
+    position: relative;
+    padding: 0;
     height: 25vh;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 10px;
 }
 
-.card h2{
+.imgCard {
+    position: relative;
+    height: 100%;
+}
+
+.imgCard img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+.linearGradient {
+    bottom: 0;
+    border-radius: 10px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.card h2 {
     position: absolute;
     margin: 0;
     bottom: 0;
@@ -37,14 +50,10 @@
 
 @media screen and (max-width: 767px) {
 
-    .card{
+    .card {
         width: 95%;
         margin-top: 10%;
-
-    }
-
-    .card img{
         height: 200px;
     }
 
-    }
+}

@@ -1,6 +1,6 @@
 import "../styles/FicheLogement.css";
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, {useState } from "react";
+import {redirect, useParams } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Data from "../datas/datas";
@@ -29,9 +29,16 @@ export default function FicheLogement() {
 
   //si id non trouvé dans les datas on redirige vers la home page
 
-  {
-    data === undefined && alert("test");
+  // {
+  //   data === undefined && alert("test");
+  // }
+
+  if( data === undefined ){
+    alert("test");
+    return redirect("/");
   }
+
+  
 
   ///////////////////////////////////////////////////////////////////
   //ON CREE UN TBLEAU POUR LES DROPDOWN(descrition/equipement)
@@ -48,7 +55,7 @@ export default function FicheLogement() {
         // on boucle sur les equipements dans la data et on implemente les li dans la description
         <ul className="container-equipement">
           {data.equipments.map((equipement) => {
-            return <li>{equipement}</li>;
+            return <li key={equipement}>{equipement}</li>;
           })}
         </ul>,
       ],
@@ -85,21 +92,21 @@ export default function FicheLogement() {
       <div className="container-tag-stars">
         <div className="container-tag">
           {data.tags.map((tag) => (
-            <Tag tag={tag} />
+            <Tag tag={tag} key={tag}/>
           ))}
         </div>
 
         <div className="container-stars">
-          <Stars rating={data.rating} />
+          <Stars rating={data.rating}/>
         </div>
       </div>
 
       {/* DROPDOWN */}
       <div className="container-dropdown">
-        {arrayDropdown.map((dropdown) => (
+        {arrayDropdown.map((dropdown, index) => (
           <div className="dropdown">
             <Dropdown
-              key={dropdown.id}
+              key={index}
               title={dropdown.title}
               description={dropdown.description}
             />

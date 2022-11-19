@@ -1,8 +1,8 @@
 import "../styles/Tag.css";
 
-function Tag(tag) {
+function Tag(tag, index) {
   return (
-  <div className="tag"> {tag.tag}</div>
+  <div className="tag" key={index}> {tag.tag} </div>
   );
 }
 

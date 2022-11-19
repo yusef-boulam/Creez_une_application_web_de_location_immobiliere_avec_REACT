@@ -1,11 +1,17 @@
 import "../styles/Gallery.css";
-import React, { useState } from "react";
+import React, { useState, useEffect} from "react";
 import Data from "../datas/datas";
 import Card from "./Card";
 
 function Gallery() {
   // state (état, données)
-  const [datas] = useState(Data);
+  const [datas, setDatas] = useState([]);
+
+  // use effect pour la mise à jours des datas
+useEffect(() =>{
+setDatas(Data)
+}, [])
+console.log(Data)
 
   return (
     // affichage

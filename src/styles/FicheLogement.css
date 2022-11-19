@@ -92,3 +92,19 @@ header {
 
 
 
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+
+    .container-img-h1 h1{
+        font-size: 24px;
+    }
+    
+
+    
+
+}
+
+

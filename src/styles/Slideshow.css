@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     margin-top: 30px;
+    width: 100%;
 }
 
 .imgLogement {
@@ -14,13 +15,24 @@
     object-fit: cover;
 }
 
-.arrow{
-margin-top:-60px
+.arrowBall{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+}
+
+.container-arrow{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 .arrow_forward {
-    position: absolute;
-    right: 0;
     margin-right: 20px;
     height: 60px;
 }
@@ -30,8 +42,6 @@ margin-top:-60px
 }
 
 .arrow_back {
-    position: absolute;
-    left: 0;
     height: 60px;
     margin-left: 20px;
 }
@@ -44,18 +54,18 @@ margin-top:-60px
 /* ball */
 
 .container-ball{
-    position: absolute;
-    width: 200px;
-    height: 15px;
-    bottom: 0;
-    left: 50%;
-    margin-bottom: 20px;
+  position: absolute;
     display: flex;
+    height: 100%;
+    width: 100%;
     flex-direction: row;
+    justify-content: center;
+    align-items:flex-end;
 }
 
 
 .ball{
+    margin-bottom: 20px;
    margin-left: 10px;
     width: 15px;
     height: 15px;

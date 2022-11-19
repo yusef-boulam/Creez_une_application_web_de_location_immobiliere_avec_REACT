@@ -36,15 +36,11 @@ function Slideshow(data) {
   
 
 //FONCTION BALL
+//on recupere l'id de la ball qui contient l'url de l'image et on met à jours le state.
   function handleClickBall(event) {
     event.preventDefault();
+      //on sauvegarde dans le STATE
     setPictures(event.target.id)
-
-    //on recupere l'index de la photo precedente dans le tableau pictures
-
-
-
-    //on sauvegarde dans le STATE
 
   }
 
@@ -77,6 +73,7 @@ function Slideshow(data) {
           ></div>
         ))}
       </div>
+      
           {/* arrow forward */}
           <img
             className="arrow_forward"

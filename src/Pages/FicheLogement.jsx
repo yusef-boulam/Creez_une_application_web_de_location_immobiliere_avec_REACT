@@ -1,6 +1,6 @@
 import "../styles/FicheLogement.css";
 import React, {useState } from "react";
-import {redirect, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Data from "../datas/datas";
@@ -8,6 +8,7 @@ import Dropdown from "../components/Dropdown";
 import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Slideshow from "../components/Slideshow";
+import Error404 from '../Pages/Error404';
 
 export default function FicheLogement() {
   /////////////////////////////////////////////////////
@@ -27,15 +28,10 @@ export default function FicheLogement() {
   // on recupere l'objet correspondant à notre logement dans data
   const data = datas.find((data) => id === data.id);
 
-  //si id non trouvé dans les datas on redirige vers la home page
-
-  // {
-  //   data === undefined && alert("test");
-  // }
+  //si id non trouvé dans les datas on affiche la page erreur
 
   if( data === undefined ){
-    alert("test");
-    return redirect("/");
+    return <Error404 />;
   }
 
   

@@ -1,5 +1,5 @@
 import "../styles/FicheLogement.css";
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
@@ -8,7 +8,7 @@ import Dropdown from "../components/Dropdown";
 import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Slideshow from "../components/Slideshow";
-import Error404 from '../Pages/Error404';
+import Error404 from "../Pages/Error404";
 
 export default function FicheLogement() {
   /////////////////////////////////////////////////////
@@ -30,11 +30,9 @@ export default function FicheLogement() {
 
   //si id non trouvé dans les datas on affiche la page erreur
 
-  if( data === undefined ){
+  if (data === undefined) {
     return <Error404 />;
   }
-
-  
 
   ///////////////////////////////////////////////////////////////////
   //ON CREE UN TBLEAU POUR LES DROPDOWN(descrition/equipement)
@@ -71,31 +69,35 @@ export default function FicheLogement() {
 
         <Slideshow data={data} />
 
-        {/* TITLE + USER */}
-        <div className="container-title-User">
-          <div className="container-title-location">
-            <h1>{data.title}</h1>
-            <p>{data.location}</p>
+        {/* TITLE + TAG */}
+        <div className="container-title-tag-user">
+          <div className="container-title-tag">
+            <div className="container-title-location">
+              <h1>{data.title}</h1>
+              <p>{data.location}</p>
+            </div>
+
+            <div className="container-tag">
+              {data.tags.map((tag) => (
+                <Tag tag={tag} key={tag} />
+              ))}
+            </div>
           </div>
-          <div className="container-name-photoUser">
-            <p>{data.host.name}</p>
-            <img src={data.host.picture} alt="user" />
+          {/* USER + STARS */}
+          <div className="container-user-stars">
+            <div className="container-name-photoUser">
+              <p>{data.host.name}</p>
+              <img src={data.host.picture} alt="user" />
+            </div>
+
+            <div className="container-stars">
+              <Stars rating={data.rating} />
+            </div>
           </div>
         </div>
       </header>
 
       {/* TAG + STARS */}
-      <div className="container-tag-stars">
-        <div className="container-tag">
-          {data.tags.map((tag) => (
-            <Tag tag={tag} key={tag}/>
-          ))}
-        </div>
-
-        <div className="container-stars">
-          <Stars rating={data.rating}/>
-        </div>
-      </div>
 
       {/* DROPDOWN */}
       <div className="container-dropdown">

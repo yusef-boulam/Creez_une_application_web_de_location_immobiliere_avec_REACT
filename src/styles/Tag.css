@@ -1,16 +1,32 @@
-
-.tag{
+.tag {
     background: #FF6060;
     border-radius: 10px;
     height: 25px;
-width: 115px;
-color: white;
-font-family: Montserrat;
-font-size: 14px;
-font-weight: 500;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-right: 10px;
+    width: 115px;
+    color: white;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+
+}
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+    .tag {
+        height: 22px;
+        width: 105px;
+        font-size: 13px;
+        border-radius: 5px;
+
+
+    }
+
 
 }

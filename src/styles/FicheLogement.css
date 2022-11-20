@@ -12,13 +12,17 @@ header {
     font-weight: 500;
 }
 
-/* TITLE + USER */
 
-.container-title-User {
+/* TITLE + TAG + USER */
+
+
+.container-title-tag-user {
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
+
+
+/* TITLE */
 
 .container-title-location {
     text-align: left;
@@ -36,6 +40,28 @@ header {
     font-size: 20px;
     text-align: left;
 }
+
+
+
+/* TAG */
+
+
+.container-tag {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+
+/* USER + STARS*/
+
+.container-user-stars {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+/* USER */
 
 .container-name-photoUser {
     display: flex;
@@ -58,18 +84,8 @@ header {
     border-radius: 50%;
     width: 64px;
     height: 64px;
-
 }
 
-/* TAG + STARS */
-
-.container-tag-stars{
-    margin-bottom: 20px;
-}
-
-.container-tag {
-    display: flex;
-}
 
 
 /* DROPDOWN */
@@ -97,14 +113,67 @@ header {
 
 @media screen and (max-width: 767px) {
 
-
-    .container-img-h1 h1{
-        font-size: 24px;
+    .page-ficheLogement {
+        padding: 20px;
     }
-    
 
-    
+
+    .container-title-tag-user {
+        flex-direction: column;
+
+    }
+
+    .container-title-User {
+        flex-direction: column;
+    }
+
+    .container-title-location h1 {
+        font-size: 27px;
+        margin-bottom: 12px;
+        margin-top: 14px;
+    }
+
+    .container-title-location p {
+        font-size: 18px;
+    }
+
+    .container-tag {
+        margin-bottom: 0;
+    }
+
+
+    .container-user-stars {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    .container-name-photoUser {
+        margin-top: 0;
+    }
+
+    .container-name-photoUser p {
+        font-size: 15px;
+        margin-right: 20px;
+        width: 44px;
+        height: 44px;
+
+    }
+
+    .container-name-photoUser img {
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .container-dropdown {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
 
 }
-
-

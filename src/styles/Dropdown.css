@@ -47,3 +47,18 @@ padding: 25px;
 border-radius: 5px;
 
 }
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+
+    .descriptif{
+
+        font-size: 18px;
+        padding: 15px;
+    }
+
+}

@@ -76,3 +76,27 @@
 .ball:hover{
     filter: brightness(25%);
 }
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+    .imgLogement {
+        border-radius: 10px;
+        height: 40vh;
+    }
+
+    .container-arrow img{
+ height: 30px;
+    }
+
+    .ball{
+        width: 10px;
+        height: 10px; 
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}

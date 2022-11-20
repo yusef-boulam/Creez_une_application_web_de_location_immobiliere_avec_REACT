@@ -12,3 +12,15 @@ width: 196px;
 .stars{
     margin-left: 7px;
 }
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+    .stars{
+      height: 20px;
+      margin-left: 5px;
+    }
+
+}

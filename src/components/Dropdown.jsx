@@ -4,14 +4,14 @@ import Arrow from "../assets/Apropos/Arrow.png";
 
 function Dropdown({ title, description }) {
   //CREATION DU STATE
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   //FONCTION qui modifie isOpen au CLICK
   function handleClick(event) {
     event.preventDefault();
 
     //changment de l'etat de isOpen (open/close)
-    let CopyisOpen = true;
+    let CopyisOpen = false;
     isOpen ? (CopyisOpen = false) : (CopyisOpen = true);
 
     //on sauvegarde dans le STATE

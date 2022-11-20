@@ -1,23 +1,68 @@
-.container-404{  
+.container-404 {
     color: #FF6060;
     font-family: 'Montserrat';
     font-style: normal;
     text-align: center;
+    max-width: 1500px;
+    text-align: center;
+    padding: 20px 100px 20px 100px;
 }
 
-.container-404 h1{
-    font-size: 288px;
+
+.container-404 h1 {
+    font-size: 240px;
     line-height: 142.6%;
-    margin: 50px 0 50px 0;
+    margin: 30px 0 50px 0;
 }
 
-.container-404 p{
-font-size: 45px;
-
-}
-
-.link404{
+.container-404 p {
     font-size: 30px;
+    margin-top: -20xp;
+    margin-bottom: 100px;
+
+}
+
+.link404 {
+    font-size: 18px;
     color: #FF6060;
     text-decoration-line: underline;
+}
+
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+
+
+    .container-404 {
+        padding: 20px;
+    }
+    
+    
+    .container-404 h1 {
+        font-size: 147px;
+        margin-top: 100px;
+        margin-bottom: 0;
+    }
+    
+    .container-404 p {
+        font-size: 19px;
+        margin-top: -10px;
+        margin-bottom: 100px;
+        margin-left:auto;
+        margin-right: auto;
+        width: 79%;
+    
+    }
+    
+    .link404 {
+        font-size: 18px;
+        color: #FF6060;
+        text-decoration-line: underline;
+    }
+    
+
+
 }

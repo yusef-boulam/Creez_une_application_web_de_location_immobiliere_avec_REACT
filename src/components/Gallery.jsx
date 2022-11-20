@@ -11,7 +11,6 @@ function Gallery() {
 useEffect(() =>{
 setDatas(Data)
 }, [])
-console.log(Data)
 
   return (
     // affichage

@@ -27,7 +27,7 @@ export default function APropos() {
           className="img-Principale"
         />
       </header>
-      <section>
+      <section className="section-apropos">
       {arrayDropdown.map((dropdown) => (
         <Dropdown key={dropdown.id} title ={dropdown.title} description={dropdown.description}/>
       ))}

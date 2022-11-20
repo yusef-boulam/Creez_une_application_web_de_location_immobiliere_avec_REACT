@@ -5,8 +5,10 @@ body{
 }
 
 
-section{
-    width: 100%;
+.section-apropos{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .APropos{
@@ -26,3 +28,21 @@ section{
     filter: brightness(75%);
     border-radius: 25px;
 }
+
+
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+    
+.section-apropos{
+    width: 100%;
+}
+    
+.img-Principale{
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+  }

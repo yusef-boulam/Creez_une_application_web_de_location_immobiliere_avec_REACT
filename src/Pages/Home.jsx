@@ -4,10 +4,14 @@ import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import pictureHome from "../assets/home/pictureHome.png";
 import "../styles/Home.css";
+import useDocumentTitle from '../useDocumentTitle.js'
 
 
 export default function Home() {
  
+  //modifie le title
+  useDocumentTitle(`Home`)
+
   return (
     <div className="homePage">
       <header>

@@ -4,8 +4,13 @@ import Footer from "../components/Footer";
 import "../styles/APropos.css";
 import pictureApropos from "../assets/Apropos/pictureAPropos.png";
 import Dropdown from "../components/Dropdown";
+import useDocumentTitle from '../useDocumentTitle.js'
 
 export default function APropos() {
+
+  //modifie le title
+  useDocumentTitle('APropos')
+
   //state
 
   const arrayDropdown =[

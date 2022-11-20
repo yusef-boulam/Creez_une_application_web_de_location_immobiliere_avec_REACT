@@ -9,8 +9,10 @@ import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Slideshow from "../components/Slideshow";
 import Error404 from "../Pages/Error404";
+import useDocumentTitle from '../useDocumentTitle.js'
 
 export default function FicheLogement() {
+
   /////////////////////////////////////////////////////
   // on recupere l'id du logement
   const Id = () => {
@@ -27,6 +29,10 @@ export default function FicheLogement() {
 
   // on recupere l'objet correspondant à notre logement dans data
   const data = datas.find((data) => id === data.id);
+
+  //modifie le title
+  useDocumentTitle(`Fiche logement / ${data.title}`) 
+  
 
   //si id non trouvé dans les datas on affiche la page erreur
 
@@ -55,6 +61,7 @@ export default function FicheLogement() {
       ],
     },
   ];
+
 
   ///////////////////////////////////////////////////////////////////////////
   //////////////////////////////////AFFICHAGE////////////////////////////////////
@@ -101,14 +108,15 @@ export default function FicheLogement() {
 
       {/* DROPDOWN */}
       <div className="container-dropdown">
-        {arrayDropdown.map((dropdown, index) => (
+        {arrayDropdown.map((dropdown) => (    
           <div className="dropdown">
             <Dropdown
-              key={index}
+              key={dropdown.id}
               title={dropdown.title}
               description={dropdown.description}
             />
           </div>
+          
         ))}
       </div>
 

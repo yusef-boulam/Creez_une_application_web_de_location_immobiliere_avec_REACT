@@ -52,7 +52,7 @@ function Slideshow(data) {
           <div className="container-arrow">
             {/* arrow back */}
             <img
-              className="arrow_back"
+              className="arrow"
               onClick={handleClickBack}
               src={arrowBack}
               alt="arrow back"
@@ -60,7 +60,7 @@ function Slideshow(data) {
 
             {/* arrow forward */}
             <img
-              className="arrow_forward"
+              className="arrow"
               onClick={handleClickForward}
               src={arrowForward}
               alt="arrow forward"

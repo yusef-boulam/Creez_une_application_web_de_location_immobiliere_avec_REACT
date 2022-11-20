@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 header {
     width: 100%;
 }
@@ -5,7 +7,7 @@ header {
 .page-ficheLogement {
     max-width: 1500px;
     text-align: center;
-    padding: 20px 100px 20px 100px;
+    padding: 20px 60px 20px 60px;
     color: #FF6060;
     font-family: 'Montserrat';
     font-style: normal;
@@ -31,6 +33,7 @@ header {
 
 .container-title-location h1 {
     font-size: 36px;
+    font-weight: 500;
     margin-bottom: 12px;
     text-align: left;
 }
@@ -75,7 +78,7 @@ header {
     align-items: center;
     font-size: 20px;
     margin-right: 20px;
-    width: 64px;
+    width: 95px;
     height: 64px;
 
 }

@@ -1,12 +1,21 @@
-
 .section-gallery {
-background: #f1eeee;
-border-radius: 25px;
-margin-top: 30px;
-padding-bottom: 50px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
+    background: #f1eeee;
+    border-radius: 25px;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
+/* ///////////////////////////////////RESPONSIVE MOBILE/////////////////////////////////////// */
+/* Sur les écrans, quand la largeur de la fenêtre fait au maximum 767px (telephone portable)*/
+
+@media screen and (max-width: 767px) {
+    .section-gallery {
+        background: white;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}

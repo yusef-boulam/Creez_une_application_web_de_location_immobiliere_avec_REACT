@@ -9,7 +9,6 @@ import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Slideshow from "../components/Slideshow";
 import Error404 from "../Pages/Error404";
-import useDocumentTitle from '../useDocumentTitle.js'
 
 export default function FicheLogement() {
 
@@ -30,15 +29,16 @@ export default function FicheLogement() {
   // on recupere l'objet correspondant à notre logement dans data
   const data = datas.find((data) => id === data.id);
 
-  //modifie le title
-  useDocumentTitle(`Fiche logement / ${data.title}`) 
   
-
   //si id non trouvé dans les datas on affiche la page erreur
-
+console.log(data)
   if (data === undefined) {
     return <Error404 />;
   }
+
+  //modification du title
+  document.title = `Fiche logement / ${data.title}`
+
 
   ///////////////////////////////////////////////////////////////////
   //ON CREE UN TBLEAU POUR LES DROPDOWN(descrition/equipement)
@@ -90,6 +90,7 @@ export default function FicheLogement() {
               ))}
             </div>
           </div>
+
           {/* USER + STARS */}
           <div className="container-user-stars">
             <div className="container-name-photoUser">

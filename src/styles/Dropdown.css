@@ -6,7 +6,7 @@
 }
 
 .Dropdown{
-    padding: 15px;
+    padding: 15px 10px 15px 10PX;
     width: 100%;
     background-color: #FF6060;
     border: none;
@@ -70,15 +70,15 @@ border-radius: 5px;
     }
 
     .img-open{
-        width: 18px;
-        height: 10px;
+        width: 26px;
+        height: 15px;
         margin-right: 15px;
         rotate: 180deg;
     }
     
     .img-close{
-        width: 18px;
-        height: 10px;
+        width: 26px;
+        height: 15px;
         margin-right: 15px;
     }
     

@@ -31,7 +31,6 @@ export default function FicheLogement() {
 
   
   //si id non trouvé dans les datas on affiche la page erreur
-console.log(data)
   if (data === undefined) {
     return <Error404 />;
   }

@@ -42,10 +42,13 @@
 
     .container-img-h1{
         margin-top: 20px;
+        width: 100%;
     }
 
     .container-img-h1 h1{
+        padding: 20px;
         font-size: 24px;
+        font-weight: 500;
     }
     
     .container-img-h1 img{

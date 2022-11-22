@@ -2,7 +2,8 @@ import "../styles/Dropdown.css";
 import React, { useState } from "react";
 import Arrow from "../assets/Apropos/Arrow.png";
 
-function Dropdown({ title, description }) {
+function Dropdown({key, title, description }) {
+  
   //CREATION DU STATE
   const [isOpen, setIsOpen] = useState(false);
 
@@ -29,13 +30,13 @@ function Dropdown({ title, description }) {
           <img
             className="img-open"
             src={Arrow}
-            alt="fleche fermeture descriptifs"
+            alt="fleche pour fermer descriptifs"
           />
         ) : (
           <img
             className="img-close"
             src={Arrow}
-            alt="fleche ouverture descriptifs"
+            alt="fleche pour ouvrir descriptifs"
           />
         )}
       </button>

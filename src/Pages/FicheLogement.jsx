@@ -104,14 +104,13 @@ export default function FicheLogement() {
         </div>
       </header>
 
-      {/* TAG + STARS */}
 
       {/* DROPDOWN */}
       <div className="container-dropdown">
         {arrayDropdown.map((dropdown) => (    
-          <div className="dropdown">
+            <div className="dropdown" key={dropdown.id}>
+             {console.log(dropdown.id)}
             <Dropdown
-              key={dropdown.id}
               title={dropdown.title}
               description={dropdown.description}
             />

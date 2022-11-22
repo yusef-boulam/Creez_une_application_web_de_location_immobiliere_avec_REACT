@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Banner from "../components/Banner";
 import "../styles/404.css";
-import useDocumentTitle from '../useDocumentTitle.js'
+// import useDocumentTitle from '../documentTitle.js'
 
 export default function Error404() {
 
     
   //modifie le title
-  useDocumentTitle('Error404')
+//   useDocumentTitle('Error404')
 
     return(
         <div className='container-404'>

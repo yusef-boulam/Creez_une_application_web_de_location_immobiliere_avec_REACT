@@ -4,13 +4,13 @@ import '../styles/Banner.css'
 
 function Banner() {
     return (
-        <header className='container-header'>
+        <nav className='container-header'>
             <img src={logo} alt='logo kasa' />
             <ul className='container-nav'>
                 <Link to="/" className='nav-accueil'>Accueil</Link>
                 <Link to="/APropos" className='nav-APropos'>A Propos</Link>
             </ul>
-        </header >
+        </nav >
     )
 }
 

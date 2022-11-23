@@ -109,7 +109,6 @@ export default function FicheLogement() {
       <div className="container-dropdown">
         {arrayDropdown.map((dropdown) => (    
             <div className="dropdown" key={dropdown.id}>
-             {console.log(dropdown.id)}
             <Dropdown
               title={dropdown.title}
               description={dropdown.description}

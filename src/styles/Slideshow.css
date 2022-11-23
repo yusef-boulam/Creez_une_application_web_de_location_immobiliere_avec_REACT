@@ -64,7 +64,7 @@
 }
 
 
-.ball{
+.ball-white{
     margin-bottom: 20px;
    margin-left: 10px;
     width: 15px;
@@ -72,6 +72,17 @@
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.ball-black{
+    margin-bottom: 20px;
+   margin-left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    filter: brightness(25%);
 }
 
 .ball:hover{

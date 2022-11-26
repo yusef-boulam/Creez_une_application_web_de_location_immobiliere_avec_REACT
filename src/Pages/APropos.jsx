@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import "../styles/APropos.css";
 import pictureApropos from "../assets/Apropos/pictureAPropos.png";
 import Dropdown from "../components/Dropdown";
-// import useDocumentTitle from '../useDocumentTitle.js'
+
+
 
 export default function APropos() {
 
-  //modifie le title
-  // useDocumentTitle('APropos')
+  useEffect(() => {
+    document.title = "a propos"
+  }, []); 
+    
 
   //state
 

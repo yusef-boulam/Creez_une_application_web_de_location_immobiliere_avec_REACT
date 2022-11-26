@@ -1,16 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../components/Banner";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 import pictureHome from "../assets/home/pictureHome.png";
 import "../styles/Home.css";
-// import useDocumentTitle from '../useDocumentTitle.js'
 
 
+  
 export default function Home() {
  
-  //modifie le title
-  // useDocumentTitle(`Home`)
+useEffect(() => {
+  document.title = "Home"
+}, []); 
 
   return (
     <div className="homePage">

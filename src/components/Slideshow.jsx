@@ -19,7 +19,6 @@ function Slideshow(data) {
   //CREATION DU STATE PICTURE ET BALL
   const [balls, setBall] = useState(arrayBalls);
  
-
   //FONCTION qui modifie picture au CLICK (retour sur la photo précédente)//////////////////////////////////////////////////////////////////////////
   function handleClickBack(event) {
     event.preventDefault();
@@ -39,13 +38,12 @@ function Slideshow(data) {
     // on le modifie active qu'on passe à true
     copyBall[newIndex].active = true;
 
-    // on sauvegarde dans le state BALL
+    // on sauvegarde dans le state
     setBall(copyBall);
 
-    //on sauvegarde dans le state PICTURE
+    //on sauvegarde dans le STATE
     setPictures(data.data.pictures[newIndex]);
   }
-
 
   //FONCTION qui modifie picture au CLICK (photo suivante)////////////////////////////////////////////////////////////////////////////////////////////////
   function handleClickForward(event) {
@@ -53,8 +51,8 @@ function Slideshow(data) {
 
     //on recupere l'index de la photo suivante dans le tableau pictures
     let newIndex = data.data.pictures.indexOf(picture) + 1;
-
     // si le nouvel index est superieur à la taille du tableau on repart au debut du tableau
+
     newIndex === data.data.pictures.length && (newIndex = 0);
 
     // on fait une copie du tableau
@@ -66,14 +64,14 @@ function Slideshow(data) {
     // on le modifie active qu'on passe à true
     copyBall[newIndex].active = true;
 
-      // on sauvegarde dans le state BALL
+    // on sauvegarde dans le state
     setBall(copyBall);
 
-     //on sauvegarde dans le state PICTURE
+    //on sauvegarde dans le STATE
     setPictures(data.data.pictures[newIndex]);
   }
 
-  //on recupere l'id de la ball selectionné //////////////////////////////////////////////////////////////////////////////////////////
+  //on recupere l'id de la ball selectionné .
   function handleClickBall(event) {
     event.preventDefault();
     // on fait une copie du tableau

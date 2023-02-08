@@ -1,6 +1,6 @@
 import "../styles/FicheLogement.css";
 import React, { useState } from "react";
-import { useParams} from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Data from "../datas/datas";
@@ -9,7 +9,6 @@ import Tag from "../components/Tag";
 import Stars from "../components/Stars";
 import Slideshow from "../components/Slideshow";
 import Error404 from "../Pages/Error404";
-
 
 export default function FicheLogement() {
 
@@ -32,33 +31,30 @@ export default function FicheLogement() {
 
   
   //si id non trouvé dans les datas on affiche la page erreur
-  
-    if (data===undefined) {
-    return <Error404/>;
-    }
-
-
+  if (data === undefined) {
+    return <Error404 />;
+  }
 
   //modification du title
-   document.title = `Fiche logement / ${data.title}`
+  document.title = `Fiche logement / ${data.title}`
 
 
   ///////////////////////////////////////////////////////////////////
   //ON CREE UN TBLEAU POUR LES DROPDOWN(descrition/equipement)
   const arrayDropdown = [
     {
-      id: 6,
+      id: `${data.id}description`,
       title: "Description",
       description: data.description,
     },
     {
-      id: 7,
+      id: `${data.id}equipement`,
       title: "Equipement",
       description: [
         // on boucle sur les equipements dans la data et on implemente les li dans la description
-        <ul className="container-equipement" key={10}>
-          {data.equipments.map(( equipement, index) => {
-            return <li key={index}>{equipement}</li>;
+        <ul className="container-equipement">
+          {data.equipments.map((equipement) => {
+            return <li key={equipement}>{equipement}</li>;
           })}
         </ul>,
       ],
@@ -108,15 +104,16 @@ export default function FicheLogement() {
         </div>
       </header>
 
+
       {/* DROPDOWN */}
-      <div className="container-dropdown" >
+      <div className="container-dropdown">
         {arrayDropdown.map((dropdown) => (    
-            <div className="dropdown"  key={dropdown.id} >
+            <div className="dropdown" key={dropdown.id}>
             <Dropdown
               title={dropdown.title}
               description={dropdown.description}
             />
-            </div>
+          </div>
           
         ))}
       </div>

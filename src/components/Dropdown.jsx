@@ -2,7 +2,7 @@ import "../styles/Dropdown.css";
 import React, { useState } from "react";
 import Arrow from "../assets/Apropos/Arrow.png";
 
-function Dropdown({key, title, description }) {
+function Dropdown({title, description }) {
   
   //CREATION DU STATE
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +41,7 @@ function Dropdown({key, title, description }) {
         )}
       </button>
 
-      {isOpen && <p className="descriptif">{description}</p>}
+      {isOpen && <div className="descriptif">{description}</div>}
     </div>
   );
 }

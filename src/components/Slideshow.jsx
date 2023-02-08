@@ -4,27 +4,21 @@ import arrowBack from "../assets/ficheLogement/arrowBack.png";
 import arrowForward from "../assets/ficheLogement/arrowForward.png";
 
 
-
 function Slideshow(data) {
+  //creation d'un tableau vide pour les BALLS////////////////////////////////////////////////////////////////////////
+  const arrayBalls = [];
 
+  // on ajoute l'url et la couleur blanche pour chaque photo
+  data.data.pictures.map((url) => {
+    arrayBalls.push({ picture: url, active: false });
+  });
 
-    //creation d'un tableau vide pour les BALLS////////////////////////////////////////////////////////////////////////
-    const arrayBalls = []
-
-    // on ajoute l'url et la couleur blanche pour chaque photo
-  
-    data.data.pictures.map(url => {
-      arrayBalls.push({picture: url, active:false})
-    })
-  
   //CREATION DU STATE
   const [picture, setPictures] = useState(data.data.cover);
 
-    //CREATION DU STATE PICTURE ET BALL
-    const [balls, setBall] = useState(arrayBalls);
-    console.log(balls)
-    
-
+  //CREATION DU STATE PICTURE ET BALL
+  const [balls, setBall] = useState(arrayBalls);
+ 
   //FONCTION qui modifie picture au CLICK (retour sur la photo précédente)//////////////////////////////////////////////////////////////////////////
   function handleClickBack(event) {
     event.preventDefault();
@@ -34,23 +28,22 @@ function Slideshow(data) {
 
     // si le nouvel index est negatif on repart avec l index le plus grand du tableau
     newIndex < 0 && (newIndex = data.data.pictures.length - 1);
-    
-    // on fait une copie du tableau 
-    const copyBall = [...balls]
+
+    // on fait une copie du tableau
+    const copyBall = [...balls];
 
     // remise à zero des balls
-    copyBall.map(ball => ball.active = false)
+    copyBall.map((ball) => (ball.active = false));
 
     // on le modifie active qu'on passe à true
-    copyBall[newIndex].active = true
+    copyBall[newIndex].active = true;
 
-   // on sauvegarde dans le state
-      setBall(copyBall)
+    // on sauvegarde dans le state
+    setBall(copyBall);
 
     //on sauvegarde dans le STATE
     setPictures(data.data.pictures[newIndex]);
   }
-
 
   //FONCTION qui modifie picture au CLICK (photo suivante)////////////////////////////////////////////////////////////////////////////////////////////////
   function handleClickForward(event) {
@@ -62,43 +55,39 @@ function Slideshow(data) {
 
     newIndex === data.data.pictures.length && (newIndex = 0);
 
-// on fait une copie du tableau 
-const copyBall = [...balls]
+    // on fait une copie du tableau
+    const copyBall = [...balls];
 
-// remise à zero des balls
-copyBall.map(ball => ball.active = false)
+    // remise à zero des balls
+    copyBall.map((ball) => (ball.active = false));
 
-// on le modifie active qu'on passe à true
-copyBall[newIndex].active = true
+    // on le modifie active qu'on passe à true
+    copyBall[newIndex].active = true;
 
-// on sauvegarde dans le state
-  setBall(copyBall)
-
+    // on sauvegarde dans le state
+    setBall(copyBall);
 
     //on sauvegarde dans le STATE
     setPictures(data.data.pictures[newIndex]);
   }
 
-
-  
   //on recupere l'id de la ball selectionné .
   function handleClickBall(event) {
     event.preventDefault();
-// on fait une copie du tableau 
-const copyBall = [...balls]
-// remise à zero des balls
-    copyBall.map(ball => ball.active = false)
+    // on fait une copie du tableau
+    const copyBall = [...balls];
+    // remise à zero des balls
+    copyBall.map((ball) => (ball.active = false));
 
     // on le modifie active qu'on passe à true
-    copyBall.find(ball => ball.picture === event.target.id).active = true
+    copyBall.find((ball) => ball.picture === event.target.id).active = true;
 
-   // on sauvegarde dans le state
-      setBall(copyBall)
- 
-    console.log(copyBall)
+    // on sauvegarde dans le state
+    setBall(copyBall);
+
     
     //on sauvegarde dans le STATE
-     setPictures(event.target.id);
+    setPictures(event.target.id);
   }
 
   return (
@@ -129,26 +118,23 @@ const copyBall = [...balls]
           {/* BALL */}
 
           <div className="container-ball">
-            {balls.map((picture) => (
-
-           picture.active ? (
-              <div
-                className="ball-black"
-                id={picture.picture}
-                key={picture.picture}
-                onClick={handleClickBall}
-              ></div>
+            {balls.map((picture) =>
+              picture.active ? (
+                <div
+                  className="ball-black"
+                  id={picture.picture}
+                  key={picture.picture}
+                  onClick={handleClickBall}
+                ></div>
               ) : (
                 <div
-                className="ball-white"
-                id={picture.picture}
-                key={picture.picture}
-                onClick={handleClickBall}
-              ></div>
+                  className="ball-white"
+                  id={picture.picture}
+                  key={picture.picture}
+                  onClick={handleClickBall}
+                ></div>
               )
-
-            ))}
-            
+            )}
           </div>
         </div>
       )}

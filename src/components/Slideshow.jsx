@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import arrowBack from "../assets/ficheLogement/arrowBack.png";
 import arrowForward from "../assets/ficheLogement/arrowForward.png";
 
-
 function Slideshow(data) {
-  //creation d'un tableau vide pour les BALLS////////////////////////////////////////////////////////////////////////
+
+  //creation d'un tableau vide pour les BALLS/////////////////////////////////////////////////////////////////////////////////////////////////////
   const arrayBalls = [];
 
   // on ajoute l'url et la couleur blanche pour chaque photo
@@ -13,13 +13,13 @@ function Slideshow(data) {
     arrayBalls.push({ picture: url, active: false });
   });
 
-  //CREATION DU STATE
+  //CREATION DU STATE PICTURE
   const [picture, setPictures] = useState(data.data.cover);
 
-  //CREATION DU STATE PICTURE ET BALL
+  //CREATION DU STATE BALLS
   const [balls, setBall] = useState(arrayBalls);
- 
-  //FONCTION qui modifie picture au CLICK (retour sur la photo précédente)//////////////////////////////////////////////////////////////////////////
+
+  //FONCTION qui modifie l'image au CLICK (retour sur la photo précédente)//////////////////////////////////////////////////////////////////////////
   function handleClickBack(event) {
     event.preventDefault();
 
@@ -35,24 +35,24 @@ function Slideshow(data) {
     // remise à zero des balls
     copyBall.map((ball) => (ball.active = false));
 
-    // on le modifie active qu'on passe à true
+    // on cible la ball qui a le même index que la photo et on modifie active qu'on passe à true (la ball devient noire)
     copyBall[newIndex].active = true;
 
-    // on sauvegarde dans le state
+    // on sauvegarde dans le state BALLS
     setBall(copyBall);
 
-    //on sauvegarde dans le STATE
+    //on sauvegarde dans le state PICTURE
     setPictures(data.data.pictures[newIndex]);
   }
 
-  //FONCTION qui modifie picture au CLICK (photo suivante)////////////////////////////////////////////////////////////////////////////////////////////////
+  //FONCTION qui modifie l'image au CLICK (photo suivante)////////////////////////////////////////////////////////////////////////////////////////////////
   function handleClickForward(event) {
     event.preventDefault();
 
     //on recupere l'index de la photo suivante dans le tableau pictures
     let newIndex = data.data.pictures.indexOf(picture) + 1;
-    // si le nouvel index est superieur à la taille du tableau on repart au debut du tableau
 
+    // si le nouvel index est superieur à la taille du tableau on repart au debut du tableau
     newIndex === data.data.pictures.length && (newIndex = 0);
 
     // on fait une copie du tableau
@@ -61,34 +61,37 @@ function Slideshow(data) {
     // remise à zero des balls
     copyBall.map((ball) => (ball.active = false));
 
-    // on le modifie active qu'on passe à true
+    // on cible la ball qui a le même index que la photo et on modifie active qu'on passe à true (la ball devient noire)
     copyBall[newIndex].active = true;
 
-    // on sauvegarde dans le state
+    // on sauvegarde dans le state BALLS
     setBall(copyBall);
 
-    //on sauvegarde dans le STATE
+    //on sauvegarde dans le state PICTURE
     setPictures(data.data.pictures[newIndex]);
   }
 
   //on recupere l'id de la ball selectionné .
   function handleClickBall(event) {
     event.preventDefault();
+
     // on fait une copie du tableau
     const copyBall = [...balls];
+
     // remise à zero des balls
     copyBall.map((ball) => (ball.active = false));
 
-    // on le modifie active qu'on passe à true
+    // on cible la ball qui a le même index que la photo et on modifie active qu'on passe à true (la ball devient noire)
     copyBall.find((ball) => ball.picture === event.target.id).active = true;
 
-    // on sauvegarde dans le state
+    // on sauvegarde dans le state BALLS
     setBall(copyBall);
 
-    
-    //on sauvegarde dans le STATE
+    //on sauvegarde dans le state PICTURE
     setPictures(event.target.id);
   }
+
+  //RENDER/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   return (
     <div className="carrousel">
@@ -115,7 +118,7 @@ function Slideshow(data) {
             />
           </div>
 
-          {/* BALL */}
+          {/* BALLS */}
 
           <div className="container-ball">
             {balls.map((picture) =>
